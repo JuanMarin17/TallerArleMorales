@@ -1,0 +1,1 @@
+document.querySelector('body').innerHTML = '<p>Hola mundo</p>';
