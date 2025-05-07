@@ -7,7 +7,7 @@ dulces.add({ dulce: "Gomitas", cantidad: 10 });
 dulces.add({ dulce: "Chocorramo", cantidad: 4 });
 
 let validacion = (o) => {
-    o = parseInt(o);
+  o = parseInt(o);
   let arrayDulces = Array.from(dulces);
   if (o < 1 || o > 5) {
     alert("Error, tienes que elegir un numero del 1 al 5");
