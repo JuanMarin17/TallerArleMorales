@@ -13,14 +13,6 @@ const mostrarCola = () =>{
     }
 }
 
-// ``const agregarCliente =(identificacion, cliente)=>{
-//     if(cliente && identificacion){
-//         cola.set(identificacion, cliente);
-//         alert(`Se agrego el cliente ${cliente} con identificacion ${identificacion}`)
-//     } else{
-//         alert("Error al ingresar el usuario")
-//     }
-// }``
 
 const agregarCliente = (identificacion, cliente) => {
     if (!identificacion || !cliente) {
