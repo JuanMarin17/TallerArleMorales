@@ -37,7 +37,7 @@ let validacion = (o) => {
 };
 
 while (true) {
-  mensaje = "Maquina expendedora solo un dolar $1\n";
+  mensaje = "Maquina expendedora solo un dolar $1 🍫\n";
   for (let i = 0; i < inventario.length; i++) {
     const dulce = inventario[i].dulce;
     const cantidad = inventario[i].cantidad;
