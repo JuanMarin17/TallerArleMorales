@@ -14,6 +14,7 @@ const mostrarCola = () =>{
 }
 
 
+
 const agregarCliente = (identificacion, cliente) => {
     if (!identificacion || !cliente) {
         alert("Error al ingresar el usuario");
@@ -34,14 +35,14 @@ const agregarCliente = (identificacion, cliente) => {
     alert(`Se agregó el cliente ${cliente} con identificación ${identificacion}`);
 };
 
-
-
-const atenderCliente = () =>{
-    if(cola.size === 0){
+const atenderCliente = () => {
+    if (cola.size === 0) {
         alert("No hay clientes los cuales se puedan atender");
-    } else{
-        let clienteAtendido = cola.get();
-        alert(`El cliente ${clienteAtendido} ha sido atendido`);
+    } else {
+        let primeraClave = cola.keys().next().value; 
+        let clienteAtendido = cola.get(primeraClave); 
+        cola.delete(primeraClave); 
+        alert(`El cliente ${clienteAtendido} con identificación ${primeraClave} ha sido atendido`);
     }
 
 }
