@@ -35,7 +35,7 @@ let validacion = (o) => {
 
 while (true) {
   let num = 1;
-  let mensaje = "Maquina expendedora solo un dolar $1\n";
+  let mensaje = "Maquina expendedora solo un dolar $1 🍫\n";
   for (let dul of dulces) {
     mensaje += `${num}. ${dul.dulce} cantidad ${dul.cantidad}\n`;
     num++;
