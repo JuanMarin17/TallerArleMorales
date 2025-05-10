@@ -4,11 +4,26 @@ arreglos (nombres y cantidades). Si hay stock y el pago es correcto, entrega el 
 inventario. */
 
 let inventario = [
-  { dulce: "chicle", cantidad: 12 },
-  { dulce: "galleta Oreo", cantidad: 6 },
-  { dulce: "Gusanito", cantidad: 10 },
-  { dulce: "Gomitas", cantidad: 8 },
-  { dulce: "Chocorramo", cantidad: 4 },
+  { 
+    dulce: "chicle", 
+    cantidad: 12 
+  },
+  { 
+    dulce: "galleta Oreo", 
+    cantidad: 6 
+  },
+  { 
+    dulce: "Gusanito", 
+    cantidad: 10 
+  },
+  { 
+    dulce: "Gomitas", 
+    cantidad: 8 
+  },
+  { 
+    dulce: "Chocorramo", 
+    cantidad: 4 
+  },
 ];
 
 let validacion = (o) => {
