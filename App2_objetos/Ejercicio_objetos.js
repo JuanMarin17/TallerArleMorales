@@ -1,9 +1,5 @@
 
-let cola = [
-    {Nombre: "juan", edad: "23", cedula: "123456789"},
-    {Nombre: "maria", edad: "30", cedula: "987654321"},
-    {Nombre: "pedro", edad: "40", cedula: "456789123"}
-];
+let cola = [];
 
 const MAX_COLA = 7;
 
