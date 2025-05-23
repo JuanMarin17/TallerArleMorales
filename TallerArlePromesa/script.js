@@ -6,9 +6,6 @@ const puntajeJuego = document.getElementById("puntaje");
 const anuncio = document.getElementById("anuncio");
 const pAnuncio = document.getElementById("pAnuncio");
 const reiniciar = document.getElementById("reiniciar");
-
-console.log("BlackJack");
-
 function crearBaraja() {
   const palos = ["♠️", "♦️", "♥️", "♣️"];
   const numeros = [
@@ -91,28 +88,30 @@ function turnoJugador(baraja) {
         return resolve({ mano, puntaje });
       }
 
-      hit.addEventListener(
-        "click",
-        () => {
-          const nueva = baraja.pop();
-          mano.push(nueva);
-          puntaje = calcularPuntaje(mano);
-          puntajeJuego.innerText = "Tu puntaje es: " + puntaje;
-          manoJugador.innerHTML += `<div class="cart-jugador">${nueva.numero}${nueva.palo}</div>`;
-          if (puntaje >= 21) {
-            return resolve({ mano, puntaje });
-          }
-        },
-        { once: true }
-      );
+      function fHit() {
+        const nueva = baraja.pop();
+        mano.push(nueva);
+        puntaje = calcularPuntaje(mano);
+        puntajeJuego.innerText = "Tu puntaje es: " + puntaje;
+        manoJugador.innerHTML += `<div class="cart-jugador">${nueva.numero}${nueva.palo}</div>`;
+        if (puntaje >= 21) {
+          hit.disabled = true;
+          stand.disabled = true;
+          return resolve({ mano, puntaje });
+        }
+      }
 
-      stand.addEventListener(
-        "click",
-        () => {
-          resolve({ mano, puntaje });
-        },
-        { once: true }
-      );
+      function fStand() {
+        hit.disabled = true;
+        stand.disabled = true;
+        resolve({ mano, puntaje });
+      }
+
+      hit.disabled = false;
+      stand.disabled = false;
+
+      hit.onclick = fHit;
+      stand.onclick = fStand;
     }
 
     preguntar();
