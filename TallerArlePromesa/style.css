@@ -1,0 +1,170 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+  background-color: #333;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.table {
+  width: 550px;
+  height: 400px;
+  position: relative;
+}
+
+h1 {
+  color: white;
+}
+
+#puntaje {
+  font-size: 25px;
+  color: white;
+}
+
+.table img {
+  width: 100%;
+  height: 100%;
+}
+
+.cart-jugador {
+  width: 50px;
+  height: 70px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.cart-banca {
+  width: 50px;
+  height: 70px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.mano-jugador {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: auto;
+  height: auto;
+  position: absolute;
+  gap: 10px;
+  transform: translate(0%, 100%);
+  top: 57%;
+  z-index: 1000;
+}
+
+.mano-banca {
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: auto;
+  height: auto;
+  position: absolute;
+  gap: 10px;
+  top: 30%;
+  transform: rotate(180deg);
+  transform: translate(0%, -100%);
+  z-index: 1000;
+}
+
+.btn-juego button {
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+}
+
+.btns-anuncio {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.btns-anuncio button {
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+}
+
+.hit,
+.reiniciar {
+  background-color: #0595ac;
+}
+
+.stand {
+  background-color: #f44336;
+}
+
+.hit:hover,
+.reiniciar:hover {
+  background-color: #0a7f9c;
+}
+
+.stand:hover {
+  background-color: #d32f2f;
+}
+
+.anuncio {
+  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container-anuncio {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  color: black;
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+}
