@@ -46,24 +46,22 @@ const atenderCliente = () => {
   }
 };
 
-while (true) {
-  let opcion = parseInt(
-    prompt(
-      "Elige una opcion\n 1. Ver cola \n 2.Agregar Cliente \n 3. Atender cliente \n 4. Salir  "
-    )
-  );
-  if (opcion === 1) {
-    mostrarCola();
-  } else if (opcion === 2) {
-    let identificacion = prompt("Ingresa tu numero de identificacion");
-    let cliente = prompt("Ingresa el nombre");
-    agregarCliente(identificacion, cliente);
-  } else if (opcion === 3) {
-    atenderCliente();
-  } else if (opcion === 4) {
-    alert("Finalizando...");
-    break;
-  } else {
-    alert("Opcion invalida");
-  }
-}
+
+while(true){
+    let opcion = parseInt(prompt("Elige una opcion\n 1. Ver cola \n 2.Agregar Cliente \n 3. Atender cliente \n 4. Salir  "));
+    if(opcion===1){
+        mostrarCola();
+    } else if(opcion=== 2){
+        let identificacion = prompt("Ingresa tu numero de identificacion")
+        let cliente = prompt("Ingresa el nombre");
+        agregarCliente(identificacion,cliente);
+    } else if(opcion === 3){
+        atenderCliente();
+    } else if(opcion===4){
+        alert("Finalizando...");
+        break
+    } else{
+        alert("Opcion invalida");
+    }
+} 
+
