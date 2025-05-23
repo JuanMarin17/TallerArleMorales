@@ -1,8 +1,8 @@
 
 let cola = [
-    {Nombre: "juan", edad: "23", cedula: "123456789"},
-    {Nombre: "maria", edad: "30", cedula: "987654321"},
-    {Nombre: "pedro", edad: "40", cedula: "456789123"}
+    {nombre: "juan", edad: "23", cedula: "123456789"},
+    {nombre: "maria", edad: "30", cedula: "987654321"},
+    {nombre: "pedro", edad: "40", cedula: "456789123"}
 ];
 
 const MAX_COLA = 7;
@@ -13,7 +13,7 @@ const mostrarCola = () => {
     } else {
         let mensaje = "Clientes en la cola:\n";
         cola.forEach((cliente, index) => {
-            mensaje += `${index + 1}. ${cliente.Nombre}, Edad: ${cliente.edad}, Cédula: ${cliente.cedula}\n`;
+            mensaje += `${index + 1}. ${cliente.nombre}, Edad: ${cliente.edad}, Cédula: ${cliente.cedula}\n`;
         });
         alert(mensaje);
     }
@@ -26,7 +26,7 @@ const agregarCliente = () => {
         let nombre = prompt("Ingresa el nombre:");
         let edad = prompt("Ingresa la edad:");
         let cedula = prompt("Ingresa la cédula:");
-        let nuevoCliente = {Nombre: nombre, edad: edad, cedula: cedula};
+        let nuevoCliente = {nombre: nombre, edad: edad, cedula: cedula};
         cola.push(nuevoCliente);
         alert(`Se agregó el cliente ${nombre} a la cola`);
     }
@@ -37,7 +37,7 @@ const atenderCliente = () => {
         alert("No hay clientes para atender");
     } else {
         let clienteAtendido = cola.shift();
-        alert(`Cliente ${clienteAtendido.Nombre} ha sido atendido`);
+        alert(`Cliente ${clienteAtendido.nombre} ha sido atendido`);
     }
 };
 
