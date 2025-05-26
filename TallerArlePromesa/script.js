@@ -111,7 +111,7 @@ function turnoJugador(baraja) {
       stand.disabled = false;
 
       hit.onclick = fHit;
-      stand.onclick = fStand;
+      stand.onclick = fStand; 
     }
 
     preguntar();
